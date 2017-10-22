@@ -2,7 +2,7 @@
 
 ![Keras logo](https://i.imgur.com/c9r5WFp.png) 
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/GKalliatakis/Delving-deep-into-GANs/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/GKalliatakis/Keras-VGG16-places365/blob/master/LICENSE)
 
 ## You have just found the Keras version of the pre-trained VGG16 model on Places365-Standard (~1.8 million images from 365 scene categories)
 
