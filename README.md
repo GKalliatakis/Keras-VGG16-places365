@@ -25,7 +25,7 @@ Please consider citing the paper if you use the pre-trained CNN model.
 ### Contents:
 Model: `vgg16_places_365.py`
 
-Weights and biases: [saved_weights](https://drive.google.com/file/d/0Bz7KyqmuGsilT0J5dmRCM0ROVHc/view?usp=sharing)
+Weights and biases: [saved_weights](https://drive.google.com/open?id=0B98ZKBhlAtp-blhCT2NFaTUyRFk)
 
 Usage: Download the zip file with the weights and biases which were dumped out from the initial Caffe resources.
 Replace `CAFFE_WEIGHTS_DIR` in `vgg16_places_365.py` with the directory of the extractted zip folder.
