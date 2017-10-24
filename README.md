@@ -4,7 +4,7 @@
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/GKalliatakis/Keras-VGG16-places365/blob/master/LICENSE)
 
-## You have just found the Keras version of the pre-trained VGG16 model on Places365-Standard (~1.8 million images from 365 scene categories)
+## You have just found the Keras (2.0) implementation of the pre-trained VGG 16 convolutional-layer CNN model on Places365-Standard (~1.8 million images from 365 scene categories).
 
 
 ### Overview
