@@ -8,27 +8,34 @@
 
 
 ### Overview
-CNN trained on Places365 database (latest subset of [Places2 Database](http://places2.csail.mit.edu)) could be directly used for scene recognition, while the deep scene features from the higher level layer of CNN could be used as generic features for visual recognition.
+CNNs trained on Places365 database (latest subset of [Places2 Database](http://places2.csail.mit.edu)) could be directly used for scene recognition, while the deep scene features from the higher level layer of CNN could be used as generic features for visual recognition.
 
-### Paper 
-The Keras model has been obtained by directly converting the [Caffe model](https://github.com/CSAILVision/places365) provived by the authors. Original model resources: [deploy](https://github.com/CSAILVision/places365/blob/master/deploy_vgg16_places365.prototxt) [weights](http://places2.csail.mit.edu/models_places365/vgg16_places365.caffemodel)
+### Paper
+The Keras models has been obtained by directly converting the [Caffe model](https://github.com/CSAILVision/places365) provived by the authors (all the original Caffe-based resources can be found there).
 
 More details about the network architecture can be found in the following paper:
 
     Places: A 10 million Image Database for Scene Recognition
     Zhou, B., Lapedriza, A., Khosla, A., Oliva, A., & Torralba, A.
     IEEE Transactions on Pattern Analysis and Machine Intelligence
-    
-Please consider citing the paper if you use the pre-trained CNN model.
+
+Please consider citing the paper if you use the pre-trained CNN models.
 
 
 ### Contents:
-Model: `vgg16_places_365.py`
+Models:
+- `vgg16_places_365.py`
+- `vgg16_hybrid_places_1365.py`
 
-Weights and biases: [saved_weights](https://drive.google.com/open?id=0B98ZKBhlAtp-blhCT2NFaTUyRFk)
+Weights:
+- [VGG16_Places365_weights.h5](https://drive.google.com/open?id=0B98ZKBhlAtp-Y2lfbHVBY3k4SjA)
+- [VGG16_Hybrid_Places1365_weights.h5](https://drive.google.com/open?id=0B98ZKBhlAtp-dHNWM0x2bnM3cU0)
 
-Usage: Download the zip file with the weights and biases which were dumped out from the initial Caffe resources.
-Replace `CAFFE_WEIGHTS_DIR` in `vgg16_places_365.py` with the directory of the extractted zip folder.
+Serialised JSONs:
+- [VGG16_Places365.json](https://drive.google.com/open?id=0B98ZKBhlAtp-Vl9GeWw0UnhQTTA)
+- [VGG16_Hybrid_Places1365.json](https://drive.google.com/open?id=0B98ZKBhlAtp-c3NZdnduN2oxYUE)
+
+Usage: Download the weights which were dumped out from the initial Caffe resources and set the argument `weights_path` accordingly in `vgg16_places_365.py` & `vgg16_hybrid_places_1365.py`
 
 ### Keras Model Summary:
 ```

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-'''VGG16-places365 pre-trained model for Keras
+'''VGG16 hybrid model for Keras.
 
 # Reference:
 - [Places: A 10 million Image Database for Scene Recognition](http://places2.csail.mit.edu/PAMI_places.pdf)
@@ -19,11 +19,11 @@ from keras.layers import GlobalMaxPooling2D
 from keras.applications.imagenet_utils import _obtain_input_shape
 
 
-def VGG16_Places365(include_top=True, weights='places',
+def VGG16_Hybrid_Places1365(include_top=True, weights='places',
           input_tensor=None, input_shape=None,
           pooling=None,
-          classes=365, weights_path=None):
-    """Instantiates the VGG16-places365 architecture.
+          classes=1365,weights_path=None):
+    """Instantiates the VGG16-hubrid architecture.
 
     Optionally loads weights pre-trained
     on Places. Note that when using TensorFlow,
@@ -64,7 +64,7 @@ def VGG16_Places365(include_top=True, weights='places',
         classes: optional number of classes to classify images
             into, only to be specified if `include_top` is True, and
             if no `weights` argument is specified.
-        weights_path: The path of the saved weights (VGG16_Places365_weights.h5)
+        weights_path: The path of the saved weights (VGG16_Hybrid_Places1365_weights.h5)
     # Returns
         A Keras model instance.
     # Raises
@@ -76,9 +76,9 @@ def VGG16_Places365(include_top=True, weights='places',
                          '`None` (random initialization) or `places` '
                          '(pre-training on Places).')
 
-    if weights == 'places' and include_top and classes != 365:
-        raise ValueError('If using `weights` as imagenet with `include_top`'
-                         ' as true, `classes` should be 365')
+    if weights == 'places' and include_top and classes != 1365:
+        raise ValueError('If using `weights` as places with `include_top`'
+                         ' as true, `classes` should be 1365')
 
 
     # Determine proper input shape
@@ -98,9 +98,6 @@ def VGG16_Places365(include_top=True, weights='places',
             img_input = input_tensor
 
 
-    # Because the dimension ordering of the layer outputs and the weights of the
-    # Caffe network are all in Theano (channel, row, col) format.
-    # K.set_image_dim_ordering("th")
 
     data = Input(shape=(3, 224, 224), name="data")
 
@@ -177,10 +174,10 @@ def VGG16_Places365(include_top=True, weights='places',
         fc6 = Dense(4096, activation='relu', name='fc6')(fc6)
         drop6 = Dropout(0.5, name='drop6')(fc6)
 
-        fc7 = Dense(4096, activation='relu', name='fc7' )(drop6)
+        fc7 = Dense(4096, activation='relu', name='fc7')(drop6)
         drop7 = Dropout(0.5, name='drop7')(fc7)
 
-        fc8a = Dense(365, name="fc8a", )(drop7)
+        fc8a = Dense(1365, name="fc8a")(drop7)
 
         prob = Activation("softmax", name="prob")(fc8a)
 
@@ -189,6 +186,7 @@ def VGG16_Places365(include_top=True, weights='places',
             prob = GlobalAveragePooling2D()(pool5)
         elif pooling == 'max':
             prob = GlobalMaxPooling2D()(pool5)
+
 
     # Create model
     model = Model(data, prob, name='vgg16_places_365')
@@ -200,5 +198,6 @@ def VGG16_Places365(include_top=True, weights='places',
 
 
 if __name__ == '__main__':
-    model = VGG16_Places365(include_top=True, weights='places')
+    model = VGG16_Hybrid_Places1365(include_top=True, weights='places')
     model.summary()
+
