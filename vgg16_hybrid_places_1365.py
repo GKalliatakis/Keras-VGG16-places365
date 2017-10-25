@@ -98,6 +98,10 @@ def VGG16_Hybrid_Places1365(include_top=True, weights='places',
             img_input = input_tensor
 
 
+    # Because the dimension ordering of the layer outputs and the weights of the
+    # Caffe network are all in Theano (channel, row, col) format.
+    K.set_image_dim_ordering("th")
+
 
     data = Input(shape=(3, 224, 224), name="data")
 
