@@ -1,10 +1,11 @@
-# VGG16-places365 model for scene classification, written in Keras 2.0 
+# Pre-trained CNN models on Places365-Standard for Keras
 
 ![Keras logo](https://i.imgur.com/c9r5WFp.png) 
 
+
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/GKalliatakis/Keras-VGG16-places365/blob/master/LICENSE)
 
-## You have just found the Keras (2.0) implementation of the pre-trained VGG 16 convolutional-layer CNN model on Places365-Standard (~1.8 million images from 365 scene categories).
+## You have just found the Keras models of the pre-trained CNNs on Places365-Standard (~1.8 million images from 365 scene categories).
 
 
 ### Overview
@@ -13,97 +14,89 @@ CNNs trained on Places365 database (latest subset of [Places2 Database](http://p
 ### Paper
 The Keras models has been obtained by directly converting the [Caffe model](https://github.com/CSAILVision/places365) provived by the authors (all the original Caffe-based resources can be found there).
 
-More details about the network architecture can be found in the following paper:
+More details about the architecture of the networks can be found in the following paper:
 
     Places: A 10 million Image Database for Scene Recognition
     Zhou, B., Lapedriza, A., Khosla, A., Oliva, A., & Torralba, A.
     IEEE Transactions on Pattern Analysis and Machine Intelligence
 
-Please consider citing the paper if you use the pre-trained CNN models.
+Please consider citing the paper above if you use the pre-trained CNN models.
 
 
 ### Contents:
-Models:
-- `vgg16_places_365.py`
-- `vgg16_hybrid_places_1365.py`
+This repository contains code for the following Keras models:
+- VGG16-places365
+- VGG16-hybrid1365
 
-Weights:
-- [VGG16_Places365_weights.h5](https://drive.google.com/open?id=0B98ZKBhlAtp-Y2lfbHVBY3k4SjA)
-- [VGG16_Hybrid_Places1365_weights.h5](https://drive.google.com/open?id=0B98ZKBhlAtp-dHNWM0x2bnM3cU0)
+### Usage: 
+All architectures are compatible with both TensorFlow and Theano, and upon instantiation the models will be built according to the image dimension ordering set in your Keras configuration file at ~/.keras/keras.json. For instance, if you have set image_dim_ordering=tf, then any model loaded from this repository will get built according to the TensorFlow dimension ordering convention, "Width-Height-Depth".
 
-Serialised JSONs:
-- [VGG16_Places365.json](https://drive.google.com/open?id=0B98ZKBhlAtp-Vl9GeWw0UnhQTTA)
-- [VGG16_Hybrid_Places1365.json](https://drive.google.com/open?id=0B98ZKBhlAtp-c3NZdnduN2oxYUE)
+Pre-trained weights can be automatically loaded upon instantiation (weights='places' argument in model constructor for all image models). Weights are automatically downloaded.
 
-Usage: Download the weights which were dumped out from the initial Caffe resources and set the argument `weights_path` accordingly in `vgg16_places_365.py` & `vgg16_hybrid_places_1365.py`
 
-### Keras Model Summary:
+
+## Examples
+
+### Classify images
+
+```python
+from vgg16_places_365 import VGG16_Places365
+from keras.preprocessing import image
+
+model = VGG16_Places365(weights='places')
+
+img_path = 'restaurant.jpg'
+img = image.load_img(img_path, target_size=(224, 224))
+x = image.img_to_array(img)
+x = np.expand_dims(x, axis=0)
+x = preprocess_input(x)
+
+preds = model.predict(x)
+print('Predicted:', preds)
 ```
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-data (InputLayer)            (None, 3, 224, 224)       0         
-_________________________________________________________________
-conv1_1 (Conv2D)             (None, 64, 224, 224)      1792      
-_________________________________________________________________
-conv1_2 (Conv2D)             (None, 64, 224, 224)      36928     
-_________________________________________________________________
-pool1 (MaxPooling2D)         (None, 64, 112, 112)      0         
-_________________________________________________________________
-conv2_1 (Conv2D)             (None, 128, 112, 112)     73856     
-_________________________________________________________________
-conv2_2 (Conv2D)             (None, 128, 112, 112)     147584    
-_________________________________________________________________
-pool2 (MaxPooling2D)         (None, 128, 56, 56)       0         
-_________________________________________________________________
-conv3_1 (Conv2D)             (None, 256, 56, 56)       295168    
-_________________________________________________________________
-conv3_2 (Conv2D)             (None, 256, 56, 56)       590080    
-_________________________________________________________________
-conv3_3 (Conv2D)             (None, 256, 56, 56)       590080    
-_________________________________________________________________
-pool3 (MaxPooling2D)         (None, 256, 28, 28)       0         
-_________________________________________________________________
-conv4_1 (Conv2D)             (None, 512, 28, 28)       1180160   
-_________________________________________________________________
-conv4_2 (Conv2D)             (None, 512, 28, 28)       2359808   
-_________________________________________________________________
-conv4_3 (Conv2D)             (None, 512, 28, 28)       2359808   
-_________________________________________________________________
-pool4 (MaxPooling2D)         (None, 512, 14, 14)       0         
-_________________________________________________________________
-conv5_1 (Conv2D)             (None, 512, 14, 14)       2359808   
-_________________________________________________________________
-conv5_2 (Conv2D)             (None, 512, 14, 14)       2359808   
-_________________________________________________________________
-conv5_3 (Conv2D)             (None, 512, 14, 14)       2359808   
-_________________________________________________________________
-pool5 (MaxPooling2D)         (None, 512, 7, 7)         0         
-_________________________________________________________________
-flatten (Flatten)            (None, 25088)             0         
-_________________________________________________________________
-fc6 (Dense)                  (None, 4096)              102764544 
-_________________________________________________________________
-drop6 (Dropout)              (None, 4096)              0         
-_________________________________________________________________
-fc7 (Dense)                  (None, 4096)              16781312  
-_________________________________________________________________
-drop7 (Dropout)              (None, 4096)              0         
-_________________________________________________________________
-fc8a (Dense)                 (None, 365)               1495405   
-_________________________________________________________________
-prob (Activation)            (None, 365)               0         
-=================================================================
-Total params: 135,755,949
-Trainable params: 135,755,949
-Non-trainable params: 0
+
+### Extract features from images
+
+```python
+from vgg16_places_365 import VGG16_Places365
+from keras.preprocessing import image
+
+model = VGG16_Places365(weights='places', include_top=False)
+
+img_path = 'restaurant.jpg'
+img = image.load_img(img_path, target_size=(224, 224))
+x = image.img_to_array(img)
+x = np.expand_dims(x, axis=0)
+x = preprocess_input(x)
+
+features = model.predict(x)
 ```
+
+
+### References
+
+- [A 10 million Image Database for Scene Recognition](http://places2.csail.mit.edu/PAMI_places.pdf) - please cite this paper if you use the VGG16-places365 or VGG16-hybrid1365 model in your work.
+- [Learning Deep Features for Scene Recognition using Places Database](https://arxiv.org/abs/1512.03385)
+
+
+Additionally, don't forget to cite this repo if you use these models:
+
+    @misc{gkallia2017keras_places365,
+    title={Keras-Places},
+    author={Grigorios Kalliatakis},
+    year={2017},
+    publisher={GitHub},
+    howpublished={\url{https://github.com/GKalliatakis/Keras-VGG16-places365}},
+    }
+
 
 ### Licensing 
-We are always interested in how this model is being used, so if you found this model useful or plan to make a release of code based on or using this package, it would be great to hear from you. 
+- All code in this repository is under the MIT license as specified by the LICENSE file.
+- The VGG16-places365 and VGG16-hybrid1365 weights are ported from the ones [released by CSAILVision](https://github.com/CSAILVision/places365) under the [MIT license](https://github.com/CSAILVision/places365/blob/master/LICENSE).
+We are always interested in how this models are being used, so if you found this models useful or plan to make a release of code based on or using this package, it would be great to hear from you. 
 
 ### Other Models 
-This is going to be an evolving repository and I will keep updating it with Keras-compatible models which are not included in [Keras Applications](https://keras.io/applications/), so make sure you have starred and forked this repository before moving on !
+This is going to be an evolving repository and I will keep updating it with Keras-applications-compatible models which are not included in the original [Keras Applications](https://keras.io/applications/), so make sure you have starred and forked this repository before moving on !
 
 ### Questions and Comments
 If you have any suggestions or bugs to report you can pull a request or start a discussion.
