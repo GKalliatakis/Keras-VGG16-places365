@@ -32,10 +32,10 @@ WEIGHTS_PATH = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/d
 WEIGHTS_PATH_NO_TOP = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/download/v0.1/vgg16-hybrid1365_weights_tf_dim_ordering_tf_kernels_notop.h5'
 
 
-def VGG16_Places365(include_top=True, weights='places',
-                    input_tensor=None, input_shape=None,
-                    pooling=None,
-                    classes=1365):
+def VGG16_Hubrid_1365(include_top=True, weights='places',
+                      input_tensor=None, input_shape=None,
+                      pooling=None,
+                      classes=1365):
     """Instantiates the VGG16-places365 architecture.
 
     Optionally loads weights pre-trained
@@ -258,6 +258,6 @@ def VGG16_Places365(include_top=True, weights='places',
 
 
 if __name__ == '__main__':
-    model = VGG16_Places365(include_top=False, weights='places')
+    model = VGG16_Hubrid_1365(include_top=True, weights='places')
     model.summary()
 
