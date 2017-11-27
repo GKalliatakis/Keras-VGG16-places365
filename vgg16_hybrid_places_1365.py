@@ -36,7 +36,7 @@ def VGG16_Hubrid_1365(include_top=True, weights='places',
                       input_tensor=None, input_shape=None,
                       pooling=None,
                       classes=1365):
-    """Instantiates the VGG16-places365 architecture.
+    """Instantiates the VGG-ImageNetPlaces365-hybrid architecture.
 
     Optionally loads weights pre-trained
     on Places. Note that when using TensorFlow,
