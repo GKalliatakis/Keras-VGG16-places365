@@ -93,10 +93,11 @@ Additionally, don't forget to cite this repo if you use these models:
 ### Licensing 
 - All code in this repository is under the MIT license as specified by the LICENSE file.
 - The VGG16-places365 and VGG16-hybrid1365 weights are ported from the ones [released by CSAILVision](https://github.com/CSAILVision/places365) under the [MIT license](https://github.com/CSAILVision/places365/blob/master/LICENSE).
-We are always interested in how this models are being used, so if you found this models useful or plan to make a release of code based on or using this package, it would be great to hear from you. 
+
+We are always interested in how these models are being used, so if you found them useful or plan to make a release of code based on or using this package, it would be great to hear from you. 
 
 ### Other Models 
-This is going to be an evolving repository and I will keep updating it with Keras-applications-compatible models which are not included in the original [Keras Applications](https://keras.io/applications/), so make sure you have starred and forked this repository before moving on !
+This is going to be an evolving repository and I will keep updating it with Keras-applications-compatible models which are not included in the original [Keras Applications](https://keras.io/applications/), so make sure you have starred :star2: and forked this repository before moving on !
 
 ### Questions and Comments
 If you have any suggestions or bugs to report you can pull a request or start a discussion.
