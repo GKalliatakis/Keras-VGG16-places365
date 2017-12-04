@@ -9,6 +9,7 @@ the Places365-Standard were merged to train a VGG16-based model (Hybrid1365-VGG)
 '''
 
 from __future__ import division, print_function
+import os
 
 import warnings
 
@@ -52,8 +53,9 @@ def VGG16_Hubrid_1365(include_top=True, weights='places',
     # Arguments
         include_top: whether to include the 3 fully-connected
             layers at the top of the network.
-        weights: one of `None` (random initialization)
-            or "places" (pre-training on Places).
+        weights: one of `None` (random initialization),
+                 'places' (pre-training on Places),
+                 or the path to the weights file to be loaded.
         input_tensor: optional Keras tensor (i.e. output of `layers.Input()`)
             to use as image input for the model.
         input_shape: optional shape tuple, only to be specified
@@ -83,10 +85,11 @@ def VGG16_Hubrid_1365(include_top=True, weights='places',
         ValueError: in case of invalid argument for `weights`, or invalid input shape
         """
 
-    if weights not in {'places', None}:
+    if not (weights in {'places', None} or os.path.exists(weights)):
         raise ValueError('The `weights` argument should be either '
-                         '`None` (random initialization) or `places` '
-                         '(pre-training on Places).')
+                         '`None` (random initialization), `places` '
+                         '(pre-training on Places), '
+                         'or the path to the weights file to be loaded.')
 
     if weights == 'places' and include_top and classes != 1365:
         raise ValueError('If using `weights` as places with `include_top`'
@@ -251,6 +254,10 @@ def VGG16_Hubrid_1365(include_top=True, weights='places',
                               '`image_data_format="channels_last"` in '
                               'your Keras config '
                               'at ~/.keras/keras.json.')
+
+
+    elif weights is not None:
+        model.load_weights(weights)
 
 
 
