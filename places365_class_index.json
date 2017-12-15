@@ -1,0 +1,1462 @@
+{
+  "0": [
+    "n0",
+    "airfield"
+  ],
+  "1": [
+    "n1",
+    "airplane_cabin"
+  ],
+  "2": [
+    "n2",
+    "airport_terminal"
+  ],
+  "3": [
+    "n3",
+    "alcove"
+  ],
+  "4": [
+    "n4",
+    "alley"
+  ],
+  "5": [
+    "n5",
+    "amphitheater"
+  ],
+  "6": [
+    "n6",
+    "amusement_arcade"
+  ],
+  "7": [
+    "n7",
+    "amusement_park"
+  ],
+  "8": [
+    "n8",
+    "apartment_building/outdoor"
+  ],
+  "9": [
+    "n9",
+    "aquarium"
+  ],
+  "10": [
+    "n10",
+    "aqueduct"
+  ],
+  "11": [
+    "n11",
+    "arcade"
+  ],
+  "12": [
+    "n12",
+    "arch"
+  ],
+  "13": [
+    "n13",
+    "archaelogical_excavation"
+  ],
+  "14": [
+    "n14",
+    "archive"
+  ],
+  "15": [
+    "n15",
+    "hockey"
+  ],
+  "16": [
+    "n16",
+    "performance"
+  ],
+  "17": [
+    "n17",
+    "rodeo"
+  ],
+  "18": [
+    "n18",
+    "army_base"
+  ],
+  "19": [
+    "n19",
+    "art_gallery"
+  ],
+  "20": [
+    "n20",
+    "art_school"
+  ],
+  "21": [
+    "n21",
+    "art_studio"
+  ],
+  "22": [
+    "n22",
+    "artists_loft"
+  ],
+  "23": [
+    "n23",
+    "assembly_line"
+  ],
+  "24": [
+    "n24",
+    "athletic_field/outdoor"
+  ],
+  "25": [
+    "n25",
+    "atrium/public"
+  ],
+  "26": [
+    "n26",
+    "attic"
+  ],
+  "27": [
+    "n27",
+    "auditorium"
+  ],
+  "28": [
+    "n28",
+    "auto_factory"
+  ],
+  "29": [
+    "n29",
+    "auto_showroom"
+  ],
+  "30": [
+    "n30",
+    "badlands"
+  ],
+  "31": [
+    "n31",
+    "bakery/shop"
+  ],
+  "32": [
+    "n32",
+    "balcony/exterior"
+  ],
+  "33": [
+    "n33",
+    "balcony/interior"
+  ],
+  "34": [
+    "n34",
+    "ball_pit"
+  ],
+  "35": [
+    "n35",
+    "ballroom"
+  ],
+  "36": [
+    "n36",
+    "bamboo_forest"
+  ],
+  "37": [
+    "n37",
+    "bank_vault"
+  ],
+  "38": [
+    "n38",
+    "banquet_hall"
+  ],
+  "39": [
+    "n39",
+    "bar"
+  ],
+  "40": [
+    "n40",
+    "barn"
+  ],
+  "41": [
+    "n41",
+    "barndoor"
+  ],
+  "42": [
+    "n42",
+    "baseball_field"
+  ],
+  "43": [
+    "n43",
+    "basement"
+  ],
+  "44": [
+    "n44",
+    "basketball_court/indoor"
+  ],
+  "45": [
+    "n45",
+    "bathroom"
+  ],
+  "46": [
+    "n46",
+    "bazaar/indoor"
+  ],
+  "47": [
+    "n47",
+    "bazaar/outdoor"
+  ],
+  "48": [
+    "n48",
+    "beach"
+  ],
+  "49": [
+    "n49",
+    "beach_house"
+  ],
+  "50": [
+    "n50",
+    "beauty_salon"
+  ],
+  "51": [
+    "n51",
+    "bedchamber"
+  ],
+  "52": [
+    "n52",
+    "bedroom"
+  ],
+  "53": [
+    "n53",
+    "beer_garden"
+  ],
+  "54": [
+    "n54",
+    "beer_hall"
+  ],
+  "55": [
+    "n55",
+    "berth"
+  ],
+  "56": [
+    "n56",
+    "biology_laboratory"
+  ],
+  "57": [
+    "n57",
+    "boardwalk"
+  ],
+  "58": [
+    "n58",
+    "boat_deck"
+  ],
+  "59": [
+    "n59",
+    "boathouse"
+  ],
+  "60": [
+    "n60",
+    "bookstore"
+  ],
+  "61": [
+    "n61",
+    "booth/indoor"
+  ],
+  "62": [
+    "n62",
+    "botanical_garden"
+  ],
+  "63": [
+    "n63",
+    "bow_window/indoor"
+  ],
+  "64": [
+    "n64",
+    "bowling_alley"
+  ],
+  "65": [
+    "n65",
+    "boxing_ring"
+  ],
+  "66": [
+    "n66",
+    "bridge"
+  ],
+  "67": [
+    "n67",
+    "building_facade"
+  ],
+  "68": [
+    "n68",
+    "bullring"
+  ],
+  "69": [
+    "n69",
+    "burial_chamber"
+  ],
+  "70": [
+    "n70",
+    "bus_interior"
+  ],
+  "71": [
+    "n71",
+    "bus_station/indoor"
+  ],
+  "72": [
+    "n72",
+    "butchers_shop"
+  ],
+  "73": [
+    "n73",
+    "butte"
+  ],
+  "74": [
+    "n74",
+    "cabin/outdoor"
+  ],
+  "75": [
+    "n75",
+    "cafeteria"
+  ],
+  "76": [
+    "n76",
+    "campsite"
+  ],
+  "77": [
+    "n77",
+    "campus"
+  ],
+  "78": [
+    "n78",
+    "canal/natural"
+  ],
+  "79": [
+    "n79",
+    "canal/urban"
+  ],
+  "80": [
+    "n80",
+    "candy_store"
+  ],
+  "81": [
+    "n81",
+    "canyon"
+  ],
+  "82": [
+    "n82",
+    "car_interior"
+  ],
+  "83": [
+    "n83",
+    "carrousel"
+  ],
+  "84": [
+    "n84",
+    "castle"
+  ],
+  "85": [
+    "n85",
+    "catacomb"
+  ],
+  "86": [
+    "n86",
+    "cemetery"
+  ],
+  "87": [
+    "n87",
+    "chalet"
+  ],
+  "88": [
+    "n88",
+    "chemistry_lab"
+  ],
+  "89": [
+    "n89",
+    "childs_room"
+  ],
+  "90": [
+    "n90",
+    "church/indoor"
+  ],
+  "91": [
+    "n91",
+    "church/outdoor"
+  ],
+  "92": [
+    "n92",
+    "classroom"
+  ],
+  "93": [
+    "n93",
+    "clean_room"
+  ],
+  "94": [
+    "n94",
+    "cliff"
+  ],
+  "95": [
+    "n95",
+    "closet"
+  ],
+  "96": [
+    "n96",
+    "clothing_store"
+  ],
+  "97": [
+    "n97",
+    "coast"
+  ],
+  "98": [
+    "n98",
+    "cockpit"
+  ],
+  "99": [
+    "n99",
+    "coffee_shop"
+  ],
+  "100": [
+    "n100",
+    "computer_room"
+  ],
+  "101": [
+    "n101",
+    "conference_center"
+  ],
+  "102": [
+    "n102",
+    "conference_room"
+  ],
+  "103": [
+    "n103",
+    "construction_site"
+  ],
+  "104": [
+    "n104",
+    "corn_field"
+  ],
+  "105": [
+    "n105",
+    "corral"
+  ],
+  "106": [
+    "n106",
+    "corridor"
+  ],
+  "107": [
+    "n107",
+    "cottage"
+  ],
+  "108": [
+    "n108",
+    "courthouse"
+  ],
+  "109": [
+    "n109",
+    "courtyard"
+  ],
+  "110": [
+    "n110",
+    "creek"
+  ],
+  "111": [
+    "n111",
+    "crevasse"
+  ],
+  "112": [
+    "n112",
+    "crosswalk"
+  ],
+  "113": [
+    "n113",
+    "dam"
+  ],
+  "114": [
+    "n114",
+    "delicatessen"
+  ],
+  "115": [
+    "n115",
+    "department_store"
+  ],
+  "116": [
+    "n116",
+    "sand"
+  ],
+  "117": [
+    "n117",
+    "vegetation"
+  ],
+  "118": [
+    "n118",
+    "desert_road"
+  ],
+  "119": [
+    "n119",
+    "diner/outdoor"
+  ],
+  "120": [
+    "n120",
+    "dining_hall"
+  ],
+  "121": [
+    "n121",
+    "dining_room"
+  ],
+  "122": [
+    "n122",
+    "discotheque"
+  ],
+  "123": [
+    "n123",
+    "doorway/outdoor"
+  ],
+  "124": [
+    "n124",
+    "dorm_room"
+  ],
+  "125": [
+    "n125",
+    "downtown"
+  ],
+  "126": [
+    "n126",
+    "dressing_room"
+  ],
+  "127": [
+    "n127",
+    "driveway"
+  ],
+  "128": [
+    "n128",
+    "drugstore"
+  ],
+  "129": [
+    "n129",
+    "elevator/door"
+  ],
+  "130": [
+    "n130",
+    "elevator_lobby"
+  ],
+  "131": [
+    "n131",
+    "elevator_shaft"
+  ],
+  "132": [
+    "n132",
+    "embassy"
+  ],
+  "133": [
+    "n133",
+    "engine_room"
+  ],
+  "134": [
+    "n134",
+    "entrance_hall"
+  ],
+  "135": [
+    "n135",
+    "escalator/indoor"
+  ],
+  "136": [
+    "n136",
+    "excavation"
+  ],
+  "137": [
+    "n137",
+    "fabric_store"
+  ],
+  "138": [
+    "n138",
+    "farm"
+  ],
+  "139": [
+    "n139",
+    "fastfood_restaurant"
+  ],
+  "140": [
+    "n140",
+    "field/cultivated"
+  ],
+  "141": [
+    "n141",
+    "field/wild "
+  ],
+  "142": [
+    "n142",
+    "field_road"
+  ],
+  "143": [
+    "n143",
+    "fire_escape"
+  ],
+  "144": [
+    "n144",
+    "fire_station"
+  ],
+  "145": [
+    "n145",
+    "fishpond"
+  ],
+  "146": [
+    "n146",
+    "flea_market/indoor"
+  ],
+  "147": [
+    "n147",
+    "florist_shop/indoor"
+  ],
+  "148": [
+    "n148",
+    "food_court"
+  ],
+  "149": [
+    "n149",
+    "football_field"
+  ],
+  "150": [
+    "n150",
+    "forest/broadleaf"
+  ],
+  "151": [
+    "n151",
+    "forest_path"
+  ],
+  "152": [
+    "n152",
+    "forest_road"
+  ],
+  "153": [
+    "n153",
+    "formal_garden"
+  ],
+  "154": [
+    "n154",
+    "fountain"
+  ],
+  "155": [
+    "n155",
+    "galley"
+  ],
+  "156": [
+    "n156",
+    "garage/indoor"
+  ],
+  "157": [
+    "n157",
+    "garage/outdoor"
+  ],
+  "158": [
+    "n158",
+    "gas_station"
+  ],
+  "159": [
+    "n159",
+    "gazebo/exterior"
+  ],
+  "160": [
+    "n160",
+    "general_store/indoor"
+  ],
+  "161": [
+    "n161",
+    "general_store/outdoor"
+  ],
+  "162": [
+    "n162",
+    "gift_shop"
+  ],
+  "163": [
+    "n163",
+    "glacier"
+  ],
+  "164": [
+    "n164",
+    "golf_course"
+  ],
+  "165": [
+    "n165",
+    "greenhouse/indoor"
+  ],
+  "166": [
+    "n166",
+    "greenhouse/outdoor"
+  ],
+  "167": [
+    "n167",
+    "grotto"
+  ],
+  "168": [
+    "n168",
+    "gymnasium/indoor"
+  ],
+  "169": [
+    "n169",
+    "hangar/indoor"
+  ],
+  "170": [
+    "n170",
+    "hangar/outdoor"
+  ],
+  "171": [
+    "n171",
+    "harbor"
+  ],
+  "172": [
+    "n172",
+    "hardware_store"
+  ],
+  "173": [
+    "n173",
+    "hayfield"
+  ],
+  "174": [
+    "n174",
+    "heliport"
+  ],
+  "175": [
+    "n175",
+    "highway"
+  ],
+  "176": [
+    "n176",
+    "home_office"
+  ],
+  "177": [
+    "n177",
+    "home_theater"
+  ],
+  "178": [
+    "n178",
+    "hospital"
+  ],
+  "179": [
+    "n179",
+    "hospital_room"
+  ],
+  "180": [
+    "n180",
+    "hot_spring"
+  ],
+  "181": [
+    "n181",
+    "hotel/outdoor"
+  ],
+  "182": [
+    "n182",
+    "hotel_room"
+  ],
+  "183": [
+    "n183",
+    "house"
+  ],
+  "184": [
+    "n184",
+    "hunting_lodge/outdoor"
+  ],
+  "185": [
+    "n185",
+    "ice_cream_parlor"
+  ],
+  "186": [
+    "n186",
+    "ice_floe"
+  ],
+  "187": [
+    "n187",
+    "ice_shelf"
+  ],
+  "188": [
+    "n188",
+    "ice_skating_rink/indoor"
+  ],
+  "189": [
+    "n189",
+    "ice_skating_rink/outdoor"
+  ],
+  "190": [
+    "n190",
+    "iceberg"
+  ],
+  "191": [
+    "n191",
+    "igloo"
+  ],
+  "192": [
+    "n192",
+    "industrial_area"
+  ],
+  "193": [
+    "n193",
+    "inn/outdoor"
+  ],
+  "194": [
+    "n194",
+    "islet"
+  ],
+  "195": [
+    "n195",
+    "jacuzzi/indoor"
+  ],
+  "196": [
+    "n196",
+    "jail_cell"
+  ],
+  "197": [
+    "n197",
+    "japanese_garden"
+  ],
+  "198": [
+    "n198",
+    "jewelry_shop"
+  ],
+  "199": [
+    "n199",
+    "junkyard"
+  ],
+  "200": [
+    "n200",
+    "kasbah"
+  ],
+  "201": [
+    "n201",
+    "kennel/outdoor"
+  ],
+  "202": [
+    "n202",
+    "kindergarden_classroom"
+  ],
+  "203": [
+    "n203",
+    "kitchen"
+  ],
+  "204": [
+    "n204",
+    "lagoon"
+  ],
+  "205": [
+    "n205",
+    "lake/natural"
+  ],
+  "206": [
+    "n206",
+    "landfill"
+  ],
+  "207": [
+    "n207",
+    "landing_deck"
+  ],
+  "208": [
+    "n208",
+    "laundromat"
+  ],
+  "209": [
+    "n209",
+    "lawn"
+  ],
+  "210": [
+    "n210",
+    "lecture_room"
+  ],
+  "211": [
+    "n211",
+    "legislative_chamber"
+  ],
+  "212": [
+    "n212",
+    "library/indoor"
+  ],
+  "213": [
+    "n213",
+    "library/outdoor"
+  ],
+  "214": [
+    "n214",
+    "lighthouse"
+  ],
+  "215": [
+    "n215",
+    "living_room"
+  ],
+  "216": [
+    "n216",
+    "loading_dock"
+  ],
+  "217": [
+    "n217",
+    "lobby"
+  ],
+  "218": [
+    "n218",
+    "lock_chamber"
+  ],
+  "219": [
+    "n219",
+    "locker_room"
+  ],
+  "220": [
+    "n220",
+    "mansion"
+  ],
+  "221": [
+    "n221",
+    "manufactured_home"
+  ],
+  "222": [
+    "n222",
+    "market/indoor"
+  ],
+  "223": [
+    "n223",
+    "market/outdoor"
+  ],
+  "224": [
+    "n224",
+    "marsh"
+  ],
+  "225": [
+    "n225",
+    "martial_arts_gym"
+  ],
+  "226": [
+    "n226",
+    "mausoleum"
+  ],
+  "227": [
+    "n227",
+    "medina"
+  ],
+  "228": [
+    "n228",
+    "mezzanine"
+  ],
+  "229": [
+    "n229",
+    "moat/water"
+  ],
+  "230": [
+    "n230",
+    "mosque/outdoor"
+  ],
+  "231": [
+    "n231",
+    "motel"
+  ],
+  "232": [
+    "n232",
+    "mountain"
+  ],
+  "233": [
+    "n233",
+    "mountain_path"
+  ],
+  "234": [
+    "n234",
+    "mountain_snowy"
+  ],
+  "235": [
+    "n235",
+    "movie_theater/indoor"
+  ],
+  "236": [
+    "n236",
+    "museum/indoor"
+  ],
+  "237": [
+    "n237",
+    "museum/outdoor"
+  ],
+  "238": [
+    "n238",
+    "music_studio"
+  ],
+  "239": [
+    "n239",
+    "natural_history_museum"
+  ],
+  "240": [
+    "n240",
+    "nursery"
+  ],
+  "241": [
+    "n241",
+    "nursing_home"
+  ],
+  "242": [
+    "n242",
+    "oast_house"
+  ],
+  "243": [
+    "n243",
+    "ocean"
+  ],
+  "244": [
+    "n244",
+    "office"
+  ],
+  "245": [
+    "n245",
+    "office_building"
+  ],
+  "246": [
+    "n246",
+    "office_cubicles"
+  ],
+  "247": [
+    "n247",
+    "oilrig"
+  ],
+  "248": [
+    "n248",
+    "operating_room"
+  ],
+  "249": [
+    "n249",
+    "orchard"
+  ],
+  "250": [
+    "n250",
+    "orchestra_pit"
+  ],
+  "251": [
+    "n251",
+    "pagoda"
+  ],
+  "252": [
+    "n252",
+    "palace"
+  ],
+  "253": [
+    "n253",
+    "pantry"
+  ],
+  "254": [
+    "n254",
+    "park"
+  ],
+  "255": [
+    "n255",
+    "parking_garage/indoor"
+  ],
+  "256": [
+    "n256",
+    "parking_garage/outdoor"
+  ],
+  "257": [
+    "n257",
+    "parking_lot"
+  ],
+  "258": [
+    "n258",
+    "pasture"
+  ],
+  "259": [
+    "n259",
+    "patio"
+  ],
+  "260": [
+    "n260",
+    "pavilion"
+  ],
+  "261": [
+    "n261",
+    "pet_shop"
+  ],
+  "262": [
+    "n262",
+    "pharmacy"
+  ],
+  "263": [
+    "n263",
+    "phone_booth"
+  ],
+  "264": [
+    "n264",
+    "physics_laboratory"
+  ],
+  "265": [
+    "n265",
+    "picnic_area"
+  ],
+  "266": [
+    "n266",
+    "pier"
+  ],
+  "267": [
+    "n267",
+    "pizzeria"
+  ],
+  "268": [
+    "n268",
+    "playground"
+  ],
+  "269": [
+    "n269",
+    "playroom"
+  ],
+  "270": [
+    "n270",
+    "plaza"
+  ],
+  "271": [
+    "n271",
+    "pond"
+  ],
+  "272": [
+    "n272",
+    "porch"
+  ],
+  "273": [
+    "n273",
+    "promenade"
+  ],
+  "274": [
+    "n274",
+    "pub/indoor"
+  ],
+  "275": [
+    "n275",
+    "racecourse"
+  ],
+  "276": [
+    "n276",
+    "raceway"
+  ],
+  "277": [
+    "n277",
+    "raft"
+  ],
+  "278": [
+    "n278",
+    "railroad_track"
+  ],
+  "279": [
+    "n279",
+    "rainforest"
+  ],
+  "280": [
+    "n280",
+    "reception"
+  ],
+  "281": [
+    "n281",
+    "recreation_room"
+  ],
+  "282": [
+    "n282",
+    "repair_shop"
+  ],
+  "283": [
+    "n283",
+    "residential_neighborhood"
+  ],
+  "284": [
+    "n284",
+    "restaurant"
+  ],
+  "285": [
+    "n285",
+    "restaurant_kitchen"
+  ],
+  "286": [
+    "n286",
+    "restaurant_patio"
+  ],
+  "287": [
+    "n287",
+    "rice_paddy"
+  ],
+  "288": [
+    "n288",
+    "river"
+  ],
+  "289": [
+    "n289",
+    "rock_arch"
+  ],
+  "290": [
+    "n290",
+    "roof_garden"
+  ],
+  "291": [
+    "n291",
+    "rope_bridge"
+  ],
+  "292": [
+    "n292",
+    "ruin"
+  ],
+  "293": [
+    "n293",
+    "runway"
+  ],
+  "294": [
+    "n294",
+    "sandbox"
+  ],
+  "295": [
+    "n295",
+    "sauna"
+  ],
+  "296": [
+    "n296",
+    "schoolhouse"
+  ],
+  "297": [
+    "n297",
+    "science_museum"
+  ],
+  "298": [
+    "n298",
+    "server_room"
+  ],
+  "299": [
+    "n299",
+    "shed"
+  ],
+  "300": [
+    "n300",
+    "shoe_shop"
+  ],
+  "301": [
+    "n301",
+    "shopfront"
+  ],
+  "302": [
+    "n302",
+    "shopping_mall/indoor"
+  ],
+  "303": [
+    "n303",
+    "shower"
+  ],
+  "304": [
+    "n304",
+    "ski_resort"
+  ],
+  "305": [
+    "n305",
+    "ski_slope"
+  ],
+  "306": [
+    "n306",
+    "sky"
+  ],
+  "307": [
+    "n307",
+    "skyscraper"
+  ],
+  "308": [
+    "n308",
+    "slum"
+  ],
+  "309": [
+    "n309",
+    "snowfield"
+  ],
+  "310": [
+    "n310",
+    "soccer_field"
+  ],
+  "311": [
+    "n311",
+    "stable"
+  ],
+  "312": [
+    "n312",
+    "stadium/baseball"
+  ],
+  "313": [
+    "n313",
+    "stadium/football"
+  ],
+  "314": [
+    "n314",
+    "stadium/soccer"
+  ],
+  "315": [
+    "n315",
+    "stage/indoor"
+  ],
+  "316": [
+    "n316",
+    "stage/outdoor"
+  ],
+  "317": [
+    "n317",
+    "staircase"
+  ],
+  "318": [
+    "n318",
+    "storage_room"
+  ],
+  "319": [
+    "n319",
+    "street"
+  ],
+  "320": [
+    "n320",
+    "subway_station/platform"
+  ],
+  "321": [
+    "n321",
+    "supermarket"
+  ],
+  "322": [
+    "n322",
+    "sushi_bar"
+  ],
+  "323": [
+    "n323",
+    "swamp"
+  ],
+  "324": [
+    "n324",
+    "swimming_hole"
+  ],
+  "325": [
+    "n325",
+    "swimming_pool/indoor"
+  ],
+  "326": [
+    "n326",
+    "swimming_pool/outdoor"
+  ],
+  "327": [
+    "n327",
+    "synagogue/outdoor"
+  ],
+  "328": [
+    "n328",
+    "television_room"
+  ],
+  "329": [
+    "n329",
+    "television_studio"
+  ],
+  "330": [
+    "n330",
+    "temple/asia"
+  ],
+  "331": [
+    "n331",
+    "throne_room"
+  ],
+  "332": [
+    "n332",
+    "ticket_booth"
+  ],
+  "333": [
+    "n333",
+    "topiary_garden"
+  ],
+  "334": [
+    "n334",
+    "tower"
+  ],
+  "335": [
+    "n335",
+    "toyshop"
+  ],
+  "336": [
+    "n336",
+    "train_interior"
+  ],
+  "337": [
+    "n337",
+    "train_station/platform"
+  ],
+  "338": [
+    "n338",
+    "tree_farm"
+  ],
+  "339": [
+    "n339",
+    "tree_house"
+  ],
+  "340": [
+    "n340",
+    "trench"
+  ],
+  "341": [
+    "n341",
+    "tundra"
+  ],
+  "342": [
+    "n342",
+    "underwater/ocean_deep"
+  ],
+  "343": [
+    "n343",
+    "utility_room"
+  ],
+  "344": [
+    "n344",
+    "valley"
+  ],
+  "345": [
+    "n345",
+    "vegetable_garden"
+  ],
+  "346": [
+    "n346",
+    "veterinarians_office"
+  ],
+  "347": [
+    "n347",
+    "viaduct"
+  ],
+  "348": [
+    "n348",
+    "village"
+  ],
+  "349": [
+    "n349",
+    "vineyard"
+  ],
+  "350": [
+    "n350",
+    "volcano"
+  ],
+  "351": [
+    "n351",
+    "volleyball_court/outdoor"
+  ],
+  "352": [
+    "n352",
+    "waiting_room"
+  ],
+  "353": [
+    "n353",
+    "water_park"
+  ],
+  "354": [
+    "n354",
+    "water_tower"
+  ],
+  "355": [
+    "n355",
+    "waterfall"
+  ],
+  "356": [
+    "n356",
+    "watering_hole"
+  ],
+  "357": [
+    "n357",
+    "wave"
+  ],
+  "358": [
+    "n358",
+    "wet_bar"
+  ],
+  "359": [
+    "n359",
+    "wheat_field"
+  ],
+  "360": [
+    "n360",
+    "wind_farm"
+  ],
+  "361": [
+    "n361",
+    "windmill"
+  ],
+  "362": [
+    "n362",
+    "yard"
+  ],
+  "363": [
+    "n363",
+    "youth_hostel"
+  ],
+  "364": [
+    "n364",
+    "zen_garden"
+  ]
+}
