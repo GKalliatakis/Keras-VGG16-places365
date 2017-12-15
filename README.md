@@ -96,8 +96,8 @@ Additionally, don't forget to cite this repo if you use these models:
 
 We are always interested in how these models are being used, so if you found them useful or plan to make a release of code based on or using this package, it would be great to hear from you. 
 
-### Other Models 
-This is going to be an evolving repository and I will keep updating it with Keras-applications-compatible models which are not included in the original [Keras Applications](https://keras.io/applications/), so make sure you have starred :star2: and forked this repository before moving on !
+### Where to get other trained models
+More info on downloading, converting, and submitting other models can be found on the main [Keras | Application Zoo repository](https://github.com/GKalliatakis/Keras-Application-Zoo).
 
 ### Questions and Comments
 If you have any suggestions or bugs to report you can pull a request or start a discussion.
