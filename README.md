@@ -42,6 +42,8 @@ Pre-trained weights can be automatically loaded upon instantiation (weights='pla
 ```python
 from vgg16_places_365 import VGG16_Places365
 from keras.preprocessing import image
+from keras.applications.imagenet_utils import preprocess_input
+from places_utils import decode_predictions
 
 model = VGG16_Places365(weights='places')
 
@@ -52,7 +54,7 @@ x = np.expand_dims(x, axis=0)
 x = preprocess_input(x)
 
 preds = model.predict(x)
-print('Predicted:', preds)
+print('Predicted:', decode_predictions(preds))
 ```
 
 ### Extract features from images
@@ -60,6 +62,7 @@ print('Predicted:', preds)
 ```python
 from vgg16_places_365 import VGG16_Places365
 from keras.preprocessing import image
+from keras.applications.imagenet_utils import preprocess_input
 
 model = VGG16_Places365(weights='places', include_top=False)
 
