@@ -12,7 +12,7 @@
 CNNs trained on Places365 database (latest subset of [Places2 Database](http://places2.csail.mit.edu)) could be directly used for scene recognition, while the deep scene features from the higher level layer of CNN could be used as generic features for visual recognition.
 
 ### Paper
-The Keras models has been obtained by directly converting the [Caffe model](https://github.com/CSAILVision/places365) provived by the authors (all the original Caffe-based resources can be found there).
+The Keras models has been obtained by directly converting the [Caffe models](https://github.com/CSAILVision/places365) provived by the authors (all the original Caffe-based resources can be found there).
 
 More details about the architecture of the networks can be found in the following paper:
 
@@ -31,13 +31,13 @@ This repository contains code for the following Keras models:
 ### Usage: 
 All architectures are compatible with both TensorFlow and Theano, and upon instantiation the models will be built according to the image dimension ordering set in your Keras configuration file at ~/.keras/keras.json. For instance, if you have set image_dim_ordering=tf, then any model loaded from this repository will get built according to the TensorFlow dimension ordering convention, "Width-Height-Depth".
 
-Pre-trained weights can be automatically loaded upon instantiation (weights='places' argument in model constructor for all image models). Weights are automatically downloaded.
+Pre-trained weights can be automatically loaded upon instantiation (`weights='places'` argument in model constructor for all image models). Weights are automatically downloaded.
 
 
 
 ## Examples
 
-### Classify images
+### Classify Places classes with VGG16-places365
 
 ```python
 from vgg16_places_365 import VGG16_Places365
@@ -57,14 +57,14 @@ preds = model.predict(x)
 print('Predicted:', decode_predictions(preds))
 ```
 
-### Extract features from images
+### Extract features from images with VGG16-hybrid1365
 
 ```python
-from vgg16_places_365 import VGG16_Places365
+from vgg16_hybrid_places_1365 import VGG16_Hubrid_1365
 from keras.preprocessing import image
 from keras.applications.imagenet_utils import preprocess_input
 
-model = VGG16_Places365(weights='places', include_top=False)
+model = VGG16_Hubrid_1365(weights='places', include_top=False)
 
 img_path = 'restaurant.jpg'
 img = image.load_img(img_path, target_size=(224, 224))
@@ -99,7 +99,7 @@ Additionally, don't forget to cite this repo if you use these models:
 
 We are always interested in how these models are being used, so if you found them useful or plan to make a release of code based on or using this package, it would be great to hear from you. 
 
-### Where to get other trained models
+### Where to get other trained models?
 More info on downloading, converting, and submitting other models can be found on the main [Keras | Application Zoo repository](https://github.com/GKalliatakis/Keras-Application-Zoo).
 
 ### Questions and Comments
