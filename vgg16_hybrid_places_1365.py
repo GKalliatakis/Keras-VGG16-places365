@@ -193,9 +193,6 @@ def VGG16_Hubrid_1365(include_top=True, weights='places',
 
     if include_top:
         # Classification block
-
-        # the name has to be changed from `flatten` to `places_flatten`
-        # in order to be able to concatenate the model with original VGG16 and VGG19
         x = Flatten(name='flatten')(x)
         x = Dense(4096, activation='relu', name='fc1')(x)
         x = Dropout(0.5, name='drop_fc1')(x)

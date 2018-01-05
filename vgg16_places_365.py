@@ -9,6 +9,7 @@ from __future__ import division, print_function
 import os
 
 import warnings
+import numpy as np
 
 from keras import backend as K
 from keras.layers import Input
@@ -24,6 +25,8 @@ from keras.applications.imagenet_utils import _obtain_input_shape
 from keras.engine.topology import get_source_inputs
 from keras.utils.data_utils import get_file
 from keras.utils import layer_utils
+from keras.preprocessing import image
+from keras.applications.imagenet_utils import preprocess_input
 
 WEIGHTS_PATH = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/download/v0.1/vgg16-places365_weights_tf_dim_ordering_tf_kernels.h5'
 WEIGHTS_PATH_NO_TOP = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/download/v0.1/vgg16-places365_weights_tf_dim_ordering_tf_kernels_notop.h5'
@@ -175,9 +178,6 @@ def VGG16_Places365(include_top=True, weights='places',
 
     if include_top:
         # Classification block
-
-        # the name has to be changed from `flatten` to `places_flatten`
-        # in order to be able to concatenate the model with original VGG16 and VGG19
         x = Flatten(name='flatten')(x)
         x = Dense(4096, activation='relu', name='fc1')(x)
         x = Dropout(0.5, name='drop_fc1')(x)
@@ -245,4 +245,14 @@ def VGG16_Places365(include_top=True, weights='places',
 if __name__ == '__main__':
     model = VGG16_Places365(include_top=True, weights='places')
     model.summary()
+
+    # Extract features from images with VGG16-places365
+
+    img_path = 'restaurant.jpg'
+    img = image.load_img(img_path, target_size=(224, 224))
+    x = image.img_to_array(img)
+    x = np.expand_dims(x, axis=0)
+    x = preprocess_input(x)
+
+    features = model.predict(x)
 
