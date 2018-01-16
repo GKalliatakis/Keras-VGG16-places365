@@ -200,9 +200,7 @@ def VGG16_Hubrid_1365(include_top=True, weights='places',
         x = Dense(4096, activation='relu', name='fc2')(x)
         x = Dropout(0.5, name='drop_fc2')(x)
 
-        x = Dense(1365, name="fc8a")(x)
-
-        x = Activation("softmax", name="predictions")(x)
+        x = Dense(1365, activation='softmax', name='predictions')(x)
 
     else:
         if pooling == 'avg':
