@@ -1,11 +1,10 @@
-# Pre-trained CNN models on Places365-Standard for Keras
-
+# Keras | VGG16 Places365 - VGG16 CNN models pre-trained  on [Places365-Standard](http://places2.csail.mit.edu/download.html) for scene classification 
 ![Keras logo](https://i.imgur.com/c9r5WFp.png) 
 
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/GKalliatakis/Keras-VGG16-places365/blob/master/LICENSE)
 
-## You have just found the Keras models of the pre-trained CNNs on Places365-Standard (~1.8 million images from 365 scene categories).
+## You have just found the Keras models of the pre-trained VGG16 CNNs on Places365-Standard (~1.8 million images from 365 scene categories).
 
 
 ### Overview
