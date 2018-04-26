@@ -42,6 +42,8 @@ Pre-trained weights can be automatically loaded upon instantiation (`weights='pl
 from vgg16_places_365 import VGG16_Places365
 from keras.preprocessing import image
 from places_utils import preprocess_input
+import numpy as np
+import os
 
 model = VGG16_Places365(weights='places')
 
@@ -78,6 +80,7 @@ for i in range(0, 5):
 from vgg16_hybrid_places_1365 import VGG16_Hubrid_1365
 from keras.preprocessing import image
 from places_utils import preprocess_input
+import numpy as np
 
 model = VGG16_Hubrid_1365(weights='places', include_top=False)
 
