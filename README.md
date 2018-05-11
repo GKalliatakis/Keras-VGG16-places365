@@ -1,10 +1,10 @@
-# Keras | VGG16 Places365 - VGG16 CNN models pre-trained  on [Places365-Standard](http://places2.csail.mit.edu/download.html) for scene classification 
+# Keras | VGG16 Places365 - VGG16 CNN models pre-trained on Places365-Standard for scene classification 
 ![Keras logo](https://i.imgur.com/c9r5WFp.png) 
 
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/GKalliatakis/Keras-VGG16-places365/blob/master/LICENSE)
 
-## You have just found the Keras models of the pre-trained VGG16 CNNs on Places365-Standard (~1.8 million images from 365 scene categories).
+## You have just found the Keras models of the pre-trained VGG16 CNNs on [Places365-Standard](http://places2.csail.mit.edu/download.html) (~1.8 million images from 365 scene categories).
 
 
 ### Overview
@@ -31,8 +31,6 @@ This repository contains code for the following Keras models:
 All architectures are compatible with both TensorFlow and Theano, and upon instantiation the models will be built according to the image dimension ordering set in your Keras configuration file at ~/.keras/keras.json. For instance, if you have set image_dim_ordering=tf, then any model loaded from this repository will get built according to the TensorFlow dimension ordering convention, "Width-Height-Depth".
 
 Pre-trained weights can be automatically loaded upon instantiation (`weights='places'` argument in model constructor for all image models). Weights are automatically downloaded.
-
-
 
 ## Examples
 
@@ -122,6 +120,9 @@ More info on downloading, converting, and submitting other models can be found o
 
 ### Questions and Comments
 If you have any suggestions or bugs to report you can pull a request or start a discussion.
+
+### Known issues: 
+- Identical & low confidence predictions when classifying Places classes, as described in [issue #5](https://github.com/GKalliatakis/Keras-VGG16-places365/issues/5)
 _________________________________________________________________
 
    [dill]: <https://github.com/joemccann/dillinger>
