@@ -29,8 +29,8 @@ from keras.utils.data_utils import get_file
 from keras.utils import layer_utils
 
 
-WEIGHTS_PATH = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/download/v0.1/vgg16-hybrid1365_weights_tf_dim_ordering_tf_kernels.h5'
-WEIGHTS_PATH_NO_TOP = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/download/v0.1/vgg16-hybrid1365_weights_tf_dim_ordering_tf_kernels_notop.h5'
+WEIGHTS_PATH = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/download/v1.0/vgg16-hybrid1365_weights_tf_dim_ordering_tf_kernels.h5'
+WEIGHTS_PATH_NO_TOP = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/download/v1.0/vgg16-hybrid1365_weights_tf_dim_ordering_tf_kernels_notop.h5'
 
 
 def VGG16_Hubrid_1365(include_top=True, weights='places',
@@ -223,10 +223,12 @@ def VGG16_Hubrid_1365(include_top=True, weights='places',
     if weights == 'places':
         if include_top:
             weights_path = get_file('vgg16-hybrid1365_weights_tf_dim_ordering_tf_kernels.h5',
-                                    WEIGHTS_PATH)
+                                    WEIGHTS_PATH,
+                                    cache_subdir='models')
         else:
             weights_path = get_file('vgg16-hybrid1365_weights_tf_dim_ordering_tf_kernels_notop.h5',
-                                    WEIGHTS_PATH_NO_TOP)
+                                    WEIGHTS_PATH_NO_TOP,
+                                    cache_subdir='models')
 
         model.load_weights(weights_path)
 
@@ -260,6 +262,63 @@ def VGG16_Hubrid_1365(include_top=True, weights='places',
 
 
 if __name__ == '__main__':
-    model = VGG16_Hubrid_1365(include_top=True, weights='places')
-    model.summary()
+    import urllib2
+    import numpy as np
+    from PIL import Image
+    from cv2 import resize
 
+    TEST_IMAGE_URL = 'http://places2.csail.mit.edu/imgs/demo/6.jpg'
+
+    image = Image.open(urllib2.urlopen(TEST_IMAGE_URL))
+    image = np.array(image, dtype=np.uint8)
+    image = resize(image, (224, 224))
+    image = np.expand_dims(image, 0)
+
+    model = VGG16_Hubrid_1365(weights='places')
+    predictions_to_return = 5
+    preds = model.predict(image)[0]
+    top_preds = np.argsort(preds)[::-1][0:predictions_to_return]
+
+    # load the class label
+    file_name = 'categories_hybrid1365.txt'
+    if not os.access(file_name, os.W_OK):
+        synset_url = 'https://raw.githubusercontent.com/csailvision/places365/master/categories_hybrid1365.txt'
+        os.system('wget ' + synset_url)
+    classes = list()
+    counter = 0
+    with open(file_name) as class_file:
+        for line in class_file:
+            if counter <=999:
+                tmp = line[9:]
+
+                if 0 <= counter <= 9:
+                    tmp = tmp[:-2]
+                elif 10 <= counter <= 99:
+                    tmp = tmp[:-3]
+                elif 100 <= counter <= 999:
+                    tmp = tmp[:-4]
+
+                classes.append(tmp)
+
+            else:
+                classes.append(line.strip().split(' ')[0][3:])
+
+            counter +=1
+    classes = tuple(classes)
+
+
+    print('--SCENE CATEGORIES:')
+    # output the prediction
+    for i in range(0, 5):
+        print(classes[top_preds[i]])
+
+
+    # --PREDICTED SCENE CATEGORIES:
+    # restaurant, eating
+    # house, eating
+    # place, eatery
+    # folding
+    # chair
+    # patio, terrace
+    # food_court
+    # cafeteria

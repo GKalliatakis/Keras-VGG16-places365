@@ -28,8 +28,8 @@ from keras.utils import layer_utils
 from keras.preprocessing import image
 from keras.applications.imagenet_utils import preprocess_input
 
-WEIGHTS_PATH = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/download/v0.1/vgg16-places365_weights_tf_dim_ordering_tf_kernels.h5'
-WEIGHTS_PATH_NO_TOP = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/download/v0.1/vgg16-places365_weights_tf_dim_ordering_tf_kernels_notop.h5'
+WEIGHTS_PATH = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/download/v1.0/vgg16-places365_weights_tf_dim_ordering_tf_kernels.h5'
+WEIGHTS_PATH_NO_TOP = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/download/v1.0/vgg16-places365_weights_tf_dim_ordering_tf_kernels_notop.h5'
 
 
 def VGG16_Places365(include_top=True, weights='places',
@@ -207,10 +207,12 @@ def VGG16_Places365(include_top=True, weights='places',
     if weights == 'places':
         if include_top:
             weights_path = get_file('vgg16-places365_weights_tf_dim_ordering_tf_kernels.h5',
-                                    WEIGHTS_PATH)
+                                    WEIGHTS_PATH,
+                                    cache_subdir='models')
         else:
             weights_path = get_file('vgg16-places365_weights_tf_dim_ordering_tf_kernels_notop.h5',
-                                    WEIGHTS_PATH_NO_TOP)
+                                    WEIGHTS_PATH_NO_TOP,
+                                    cache_subdir='models')
 
         model.load_weights(weights_path)
 
@@ -241,16 +243,42 @@ def VGG16_Places365(include_top=True, weights='places',
 
 
 if __name__ == '__main__':
-    model = VGG16_Places365(include_top=True, weights='places')
-    model.summary()
+    import urllib2
+    import numpy as np
+    from PIL import Image
+    from cv2 import resize
 
-    # Extract features from images with VGG16-places365
+    TEST_IMAGE_URL = 'http://places2.csail.mit.edu/imgs/demo/6.jpg'
 
-    img_path = 'restaurant.jpg'
-    img = image.load_img(img_path, target_size=(224, 224))
-    x = image.img_to_array(img)
-    x = np.expand_dims(x, axis=0)
-    x = preprocess_input(x)
+    image = Image.open(urllib2.urlopen(TEST_IMAGE_URL))
+    image = np.array(image, dtype=np.uint8)
+    image = resize(image, (224, 224))
+    image = np.expand_dims(image, 0)
 
-    features = model.predict(x)
+    model = VGG16_Places365(weights='places')
+    predictions_to_return = 5
+    preds = model.predict(image)[0]
+    top_preds = np.argsort(preds)[::-1][0:predictions_to_return]
 
+    # load the class label
+    file_name = 'categories_places365.txt'
+    if not os.access(file_name, os.W_OK):
+        synset_url = 'https://raw.githubusercontent.com/csailvision/places365/master/categories_places365.txt'
+        os.system('wget ' + synset_url)
+    classes = list()
+    with open(file_name) as class_file:
+        for line in class_file:
+            classes.append(line.strip().split(' ')[0][3:])
+    classes = tuple(classes)
+
+    print('--PREDICTED SCENE CATEGORIES:')
+    # output the prediction
+    for i in range(0, 5):
+        print(classes[top_preds[i]])
+
+    # --PREDICTED SCENE CATEGORIES:
+    # cafeteria
+    # food_court
+    # restaurant_patio
+    # banquet_hall
+    # restaurant

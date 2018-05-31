@@ -37,22 +37,24 @@ Pre-trained weights can be automatically loaded upon instantiation (`weights='pl
 ### Classify Places classes with VGG16-places365
 
 ```python
-from vgg16_places_365 import VGG16_Places365
-from keras.preprocessing import image
-from places_utils import preprocess_input
-import numpy as np
 import os
+import urllib2
+import numpy as np
+from PIL import Image
+from cv2 import resize
+
+from vgg16_places_365 import VGG16_Places365
+
+TEST_IMAGE_URL = 'http://places2.csail.mit.edu/imgs/demo/6.jpg'
+
+image = Image.open(urllib2.urlopen(TEST_IMAGE_URL))
+image = np.array(image, dtype=np.uint8)
+image = resize(image, (224, 224))
+image = np.expand_dims(image, 0)
 
 model = VGG16_Places365(weights='places')
-
-img_path = 'restaurant.jpg'
-img = image.load_img(img_path, target_size=(224, 224))
-x = image.img_to_array(img)
-x = np.expand_dims(x, axis=0)
-x = preprocess_input(x)
-
 predictions_to_return = 5
-preds = model.predict(x)[0]
+preds = model.predict(image)[0]
 top_preds = np.argsort(preds)[::-1][0:predictions_to_return]
 
 # load the class label
@@ -70,25 +72,28 @@ print('--SCENE CATEGORIES:')
 # output the prediction
 for i in range(0, 5):
     print(classes[top_preds[i]])
+
 ```
 
 ### Extract features from images with VGG16-hybrid1365
 
 ```python
-from vgg16_hybrid_places_1365 import VGG16_Hubrid_1365
-from keras.preprocessing import image
-from places_utils import preprocess_input
+import urllib2
 import numpy as np
+from PIL import Image
+from cv2 import resize
+
+from vgg16_hybrid_places_1365 import VGG16_Hubrid_1365
+
+TEST_IMAGE_URL = 'http://places2.csail.mit.edu/imgs/demo/6.jpg'
+
+image = Image.open(urllib2.urlopen(TEST_IMAGE_URL))
+image = np.array(image, dtype=np.uint8)
+image = resize(image, (224, 224))
+image = np.expand_dims(image, 0)
 
 model = VGG16_Hubrid_1365(weights='places', include_top=False)
-
-img_path = 'restaurant.jpg'
-img = image.load_img(img_path, target_size=(224, 224))
-x = image.img_to_array(img)
-x = np.expand_dims(x, axis=0)
-x = preprocess_input(x)
-
-features = model.predict(x)
+features = model.predict(image)
 ```
 
 
@@ -101,7 +106,7 @@ features = model.predict(x)
 Additionally, don't forget to cite this repo if you use these models:
 
     @misc{gkallia2017keras_places365,
-    title={Keras-Places},
+    title={Keras-VGG16-Places365},
     author={Grigorios Kalliatakis},
     year={2017},
     publisher={GitHub},
@@ -109,9 +114,10 @@ Additionally, don't forget to cite this repo if you use these models:
     }
 
 
-### Licensing 
+### Licensing
 - All code in this repository is under the MIT license as specified by the LICENSE file.
-- The VGG16-places365 and VGG16-hybrid1365 weights are ported from the ones [released by CSAILVision](https://github.com/CSAILVision/places365) under the [MIT license](https://github.com/CSAILVision/places365/blob/master/LICENSE).
+- The VGG16-places365 and VGG16-hybrid1365 weights were originally ported from the ones [released by CSAILVision](https://github.com/CSAILVision/places365) under the [MIT license](https://github.com/CSAILVision/places365/blob/master/LICENSE) but resulted in an [identical & low confidence predictions issue](https://github.com/GKalliatakis/Keras-VGG16-places365/issues/5).
+- The current version of the VGG16-places365 and VGG16-hybrid1365 are the ones released by [landmark-recognition-challenge](https://github.com/antorsae/landmark-recognition-challenge) under the [GNU General Public License v3.0](https://github.com/antorsae/landmark-recognition-challenge/blob/master/LICENSE)
 
 We are always interested in how these models are being used, so if you found them useful or plan to make a release of code based on or using this package, it would be great to hear from you. 
 
@@ -121,9 +127,7 @@ More info on downloading, converting, and submitting other models can be found o
 ### Questions and Comments
 If you have any suggestions or bugs to report you can pull a request or start a discussion.
 
-### Known issues: 
-- Identical & low confidence predictions when classifying Places classes, as described in [issue #5](https://github.com/GKalliatakis/Keras-VGG16-places365/issues/5)
-_________________________________________________________________
+______________________________________________________
 
    [dill]: <https://github.com/joemccann/dillinger>
    [git-repo-url]: <https://github.com/joemccann/dillinger.git>
