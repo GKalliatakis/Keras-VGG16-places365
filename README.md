@@ -19,7 +19,7 @@ More details about the architecture of the networks can be found in the followin
     Zhou, B., Lapedriza, A., Khosla, A., Oliva, A., & Torralba, A.
     IEEE Transactions on Pattern Analysis and Machine Intelligence
 
-Please consider citing the paper above if you use the pre-trained CNN models.
+Please consider citing the above paper if you use the pre-trained CNN models.
 
 
 ### Contents:
@@ -73,6 +73,14 @@ print('--SCENE CATEGORIES:')
 for i in range(0, 5):
     print(classes[top_preds[i]])
 
+# --PREDICTED SCENE CATEGORIES:
+# cafeteria
+# food_court
+# restaurant_patio
+# banquet_hall
+# restaurant
+
+
 ```
 
 ### Extract features from images with VGG16-hybrid1365
@@ -117,7 +125,7 @@ Additionally, don't forget to cite this repo if you use these models:
 ### Licensing
 - All code in this repository is under the MIT license as specified by the LICENSE file.
 - The VGG16-places365 and VGG16-hybrid1365 weights were originally ported from the ones [released by CSAILVision](https://github.com/CSAILVision/places365) under the [MIT license](https://github.com/CSAILVision/places365/blob/master/LICENSE) but resulted in an [identical & low confidence predictions issue](https://github.com/GKalliatakis/Keras-VGG16-places365/issues/5).
-- The current version of the VGG16-places365 and VGG16-hybrid1365 are the ones released by [landmark-recognition-challenge](https://github.com/antorsae/landmark-recognition-challenge) under the [GNU General Public License v3.0](https://github.com/antorsae/landmark-recognition-challenge/blob/master/LICENSE)
+- The current version of the VGG16-places365 and VGG16-hybrid1365 weights are the ones released by [landmark-recognition-challenge](https://github.com/antorsae/landmark-recognition-challenge) under the [GNU General Public License v3.0](https://github.com/antorsae/landmark-recognition-challenge/blob/master/LICENSE)
 
 We are always interested in how these models are being used, so if you found them useful or plan to make a release of code based on or using this package, it would be great to hear from you. 
 
