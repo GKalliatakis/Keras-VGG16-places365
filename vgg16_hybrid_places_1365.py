@@ -307,18 +307,16 @@ if __name__ == '__main__':
     classes = tuple(classes)
 
 
-    print('--SCENE CATEGORIES:')
+    print('--PREDICTED SCENE CATEGORIES:')
     # output the prediction
     for i in range(0, 5):
         print(classes[top_preds[i]])
 
 
     # --PREDICTED SCENE CATEGORIES:
-    # restaurant, eating
-    # house, eating
-    # place, eatery
-    # folding
-    # chair
+    # restaurant, eating house, eating place, eatery
+    # folding chair
     # patio, terrace
     # food_court
     # cafeteria
+
