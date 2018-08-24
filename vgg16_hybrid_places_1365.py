@@ -33,7 +33,7 @@ WEIGHTS_PATH = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/d
 WEIGHTS_PATH_NO_TOP = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/download/v1.0/vgg16-hybrid1365_weights_tf_dim_ordering_tf_kernels_notop.h5'
 
 
-def VGG16_Hubrid_1365(include_top=True, weights='places',
+def VGG16_Hybrid_1365(include_top=True, weights='places',
                       input_tensor=None, input_shape=None,
                       pooling=None,
                       classes=1365):
@@ -274,7 +274,7 @@ if __name__ == '__main__':
     image = resize(image, (224, 224))
     image = np.expand_dims(image, 0)
 
-    model = VGG16_Hubrid_1365(weights='places')
+    model = VGG16_Hybrid_1365(weights='places')
     predictions_to_return = 5
     preds = model.predict(image)[0]
     top_preds = np.argsort(preds)[::-1][0:predictions_to_return]
