@@ -3,6 +3,7 @@
 
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/GKalliatakis/Keras-VGG16-places365/blob/master/LICENSE)
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Keras%20code%20and%20weights%20files%20for%20the%20VGG16-places365%20and%20VGG16-hybrid1365%20CNNs%20for%20scene%20classification&url=https://github.com/GKalliatakis/Keras-VGG16-places365&hashtags=ML,DeepLearning,CNNs,SceneRecognition,Keras,Places365)
 
 ## You have just found the Keras models of the pre-trained VGG16 CNNs on [Places365-Standard](http://places2.csail.mit.edu/download.html) (~1.8 million images from 365 scene categories).
 
@@ -123,7 +124,7 @@ Additionally, don't forget to cite this repo if you use these models:
 
 
 ### Licensing
-- All code in this repository is under the MIT license as specified by the LICENSE file.
+- All code in this repository is under the MIT license as specified by the [LICENSE file](https://github.com/GKalliatakis/Keras-VGG16-places365/blob/master/LICENSE).
 - The VGG16-places365 and VGG16-hybrid1365 weights were originally ported from the ones [released by CSAILVision](https://github.com/CSAILVision/places365) under the [MIT license](https://github.com/CSAILVision/places365/blob/master/LICENSE) but resulted in an [identical & low confidence predictions issue](https://github.com/GKalliatakis/Keras-VGG16-places365/issues/5).
 - The current version of the VGG16-places365 and VGG16-hybrid1365 weights are the ones released by [landmark-recognition-challenge](https://github.com/antorsae/landmark-recognition-challenge) under the [GNU General Public License v3.0](https://github.com/antorsae/landmark-recognition-challenge/blob/master/LICENSE)
 
