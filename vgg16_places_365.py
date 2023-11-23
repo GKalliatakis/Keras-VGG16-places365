@@ -5,28 +5,30 @@
 - [Places: A 10 million Image Database for Scene Recognition](http://places2.csail.mit.edu/PAMI_places.pdf)
 '''
 
-from __future__ import division, print_function
-import os
+from __future__ import division
+from __future__ import print_function
 
+import os
 import warnings
-import numpy as np
 
 from keras import backend as K
-from keras.layers import Input
-from keras.layers.core import Activation, Dense, Flatten
-from keras.layers.pooling import MaxPooling2D
-from keras.models import Model
 from keras.layers import Conv2D
-from keras.regularizers import l2
-from keras.layers.core import Dropout
+from keras.layers import Dense
+from keras.layers import Dropout
+from keras.layers import Flatten
 from keras.layers import GlobalAveragePooling2D
 from keras.layers import GlobalMaxPooling2D
-from keras_applications.imagenet_utils import _obtain_input_shape
-from keras.engine.topology import get_source_inputs
-from keras.utils.data_utils import get_file
-from keras.utils import layer_utils
+from keras.layers import Input
+from keras.layers import MaxPooling2D
+from keras.models import Model
 from keras.preprocessing import image
-from keras.applications.imagenet_utils import preprocess_input
+from keras.regularizers import l2
+from keras.src.applications.imagenet_utils import \
+    obtain_input_shape as _obtain_input_shape
+from keras.utils import get_file
+from keras.utils import get_source_inputs
+import numpy as np
+from tensorflow.python.keras.utils import layer_utils
 
 WEIGHTS_PATH = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/download/v1.0/vgg16-places365_weights_tf_dim_ordering_tf_kernels.h5'
 WEIGHTS_PATH_NO_TOP = 'https://github.com/GKalliatakis/Keras-VGG16-places365/releases/download/v1.0/vgg16-places365_weights_tf_dim_ordering_tf_kernels_notop.h5'
